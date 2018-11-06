@@ -1,0 +1,137 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-09-10T15:22:24+04:30
+
+====== Latex ======
+
+Created پنجشنبه 10 سپتامبر 2015
+
+== install problem ==
+//sudo dpkg --purge --force-depends texlive-lang-other texlive-latex-extra tex-common texlive-fonts-recommended texlive-pictures texlive-metapost//
+//sudo apt-get install -f texlive-lang-other texlive-latex-extra tex-common texlive-fonts-recommended texlive-pictures texlive-metapost//
+//sudo mktexlsr//
+//sudo updmap-sys// 
+
+
+
+\renewcommand{\familydefault}{\sfdefault}
+This changes the default font family to sans-serif.
+
+
+== To create it with geometry is easy ==
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+== set margin ==
+\usepackage[margin=0.5in]{geometry}
+
+\vspace*{3\baselineskip}
+
+\usepackage{geometry}
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=20mm,
+top=20mm,
+}
+
+
+== insert picture in tabular ==
+**\documentclass{article}**
+**\usepackage{graphicx}**
+**\begin{document}**
+**\centering**
+**   \begin{tabular}{c c}**
+**  \includegraphics[scale=.41]{pic/1b.png}  &  \includegraphics[scale=.41]{pic/1a.png} \\**
+**\end{tabular}**
+**  \caption{A boat.}**
+**  \label{fig:boat1}**
+**\end{figure}**
+**Figure \ref{fig:boat1} shows a boat.**
+**\end{document}**
+
+== How to center a specific caption? ==
+\usepackage{caption}
+\captionsetup{justification=centering}
+or
+\captionsetup{justification=centering,margin=2cm}
+
+== page numbering ==
+\pagenumbering{gobble}
+
+\vspace*{3\baselineskip}
+
+== insert picture in tabular ==
+**\documentclass{article}**
+**\usepackage{graphicx}**
+**\begin{document}**
+**\centering**
+**   \begin{tabular}{c c}**
+**  \includegraphics[scale=.41]{pic/1b.png}  &  \includegraphics[scale=.41]{pic/1a.png} \\**
+**\end{tabular}**
+**  \caption{A boat.}**
+**  \label{fig:boat1}**
+**\end{figure}**
+**Figure \ref{fig:boat1} shows a boat.**
+**\end{document}**
+
+
+
+== Moving a Latex figure to the left ==
+
+\begin{figure}[htbp]
+	**\hspace*{-2cm}**  
+	\includegraphics{./results/fig5.eps}
+	\caption{Time average}
+	\label{fig:f1}
+\end{figure}
+
+== Vertical blank spaces ==
+//\vspace{5mm} %5mm vertical space//
+//\vfill//
+ Text at the bottom of the page.
+https://www.sharelatex.com/learn/Line_breaks_and_blank_spaces
+
+
+
+
+=== %line spacing after xepersian ===
+\makeatletter
+\newcommand*{\Computebaselinestretch}[1]{%
+  \strip@pt\dimexpr\number\numexpr\number\dimexpr#1\relax*65536/\number\dimexpr\baselineskip\relax\relax sp\relax
+}
+\makeatother
+\linespread{\Computebaselinestretch{1.5cm}}
+
+فقط فاصله خطوط عوض بشه این کافیه    
+\linespread{1.5}
+
+
+
+====== bibliography ======
+
+\clearpage    % Forcing bibliography to the end 
+\medskip
+\bibliographystyle{unsrt}
+% \bibliographystyle{plain} % such as plain
+\bibliography{lib.bib} %such as MyReferences
+
+===== graphic path =====
+\graphicspath{ {fig2/} }
+
+
+===== \begin{array}{lcl} =====
+z & = & a \\
+& = & a \\
+f(x,y,z) & = & x + y + z
+\end{array}
+
+
+====== trim figure ======
+https://tex.stackexchange.com/questions/57418/crop-an-inserted-image
+ trim={<left> <lower> <right> <upper>}
+\includegraphics[trim=50 50 0 50,clip,scale=0.3]{7.eps}
+
+
+===== Force figure placement in text =====
+The short answer: use the “float” package and then the [H] option for your figure.
+\begin{figure}[H]

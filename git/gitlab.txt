@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-10-19T11:44:32+03:30
+
+====== gitlab ======
+Created Wednesday 19 October 2016
+
+== Command line instructions ==
+
+== Git global setup ==
+
+//git config --global user.name "Abolfazl Ziaeemehr"//
+//git config --global user.email "a.ziaeemehr@gmail.com"//
+
+== Create a new repository ==
+
+//git clone https://gitlab.com/a.ziaeemehr/neural.git//
+//cd neural//
+//touch README.md//
+//git add README.md//
+//git commit -m "add README"//
+//git push -u origin master//
+
+== Existing folder or Git repository ==
+
+//cd existing_folder//
+//git init//
+//git remote add origin https://gitlab.com/a.ziaeemehr/neural.git//
+//git add .//
+//git commit//
+//git push -u origin master//
+
+
+
+== Updates were rejected because the tip of your current branch is behind ==
+//git pull git@gitlab.com:a.ziaeemehr/my_neural.git master//
+next
+//git push -u origin master//
+
+
+== to see what has changed: ==
+//git status//
+
+== to add all files that have been changed: ==
+//git add -u//
+then push to the repository5.
+
+
+
+

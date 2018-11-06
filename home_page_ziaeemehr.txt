@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-08-30T12:10:35+04:30
+
+====== home page ziaeemehr iasbs ======
+Created یکشنبه 30 اوت 2015
+
+ آدرس وب سایت شخصی به صورت http://www.iasbs.ac.ir/~a.ziaeemehr  است. نحوه دسترسی جهت قرار دادن اطلاعات دروب سایت شخصی یکی از دو روش زیر می باشد: 
+ 
+الف – دسترسی از  طریق ssh username@85.185.211.20، ssh username@iasbs.ac.ir و یا نرم افزارهای ssh و sftp.
+
+ب -  دسترسی از طریق ایجاد Map network drive به آدرس \\www\myweb

@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-03-21T12:39:30+03:30
+
+====== Visual Studio Code ======
+Created Tuesday 21 March 2017
+
+== 5 Great Visual Studio Keyboard Shortcuts ==
+Move Code Alt+Up/Down
+Create Collapsible Region Ctrl+M+H/Ctrl+M+U
+Comment Code Block Ctrl+K+C/Ctrl+K+U
+
+=== Keyboard Shortcuts Reference ===
+https://code.visualstudio.com/docs/getstarted/keybindings
+http://donovanbrown.com/post/visual-studio-code-keyboard-shortcut-cheat-sheet
+
+**Ctrl + 1**
+focus left editor
+**Ctrl + 2**
+focus right editor
+**Ctrl + B**
+toggle sidebar
+**Ctrl + Enter**
+open file to side
+**Ctrl + G**
+go to line
+**Ctrl + F2**
+add cursor to each occurrence of current word

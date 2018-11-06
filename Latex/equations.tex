@@ -1,0 +1,59 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-11-08T11:06:35+03:30
+
+====== equations ======
+Created Tuesday 08 November 2016
+
+== Subordinate equation numbering ==
+//\begin{subequations}//
+//Maxwell's equations://
+//\begin{align}//
+//        B'&=-\nabla \times E,\\//
+//        E'&=\nabla \times B - 4\pi j,//
+//\end{align}//
+//\end{subequations}//
+
+== align ==
+//\begin{eqnarray*}//
+//\tau_e \frac{dE_k(t)}{dt}&= &-E_k(t-\tau_0) +(k_e-r_e E_k(t-\tau_0))S_e\big(A_k^e +\eta U_l\big) \quad k,l =1,2 \quad k\neq l \\//
+//\tau_i \frac{dI_k(t)}{dt}&= &-I_k(t-\tau_0) +(k_i-r_i I_k(t-\tau_0))S_i\big(A_k^i +\eta V_l\big) \quad k,l =1,2 \quad k\neq l     \\//
+//U_l   &=  &a_1 E_l(t-\tau_1) - a_2 I_l(t-\tau_1) \\//
+//V_l   &=  &a_3 E_l(t-\tau_1) -a_4 I_l(t-\tau_1)  \\//
+//A_k^e &=  &c_1E_k(t-\tau_0) -c_2I_k(t-\tau_0) +P_k  \\//
+//A_k^i &=  &c_3E_k(t-\tau_0) -c_4I_k(t-\tau_0) +Q_k    //
+//\end{eqnarray*}//
+
+== insert code ==
+//\usepackage{listings}//
+//\usepackage{listings}//
+//\usepackage{float}//
+//\usepackage{color}//
+//\definecolor{my_red}{RGB}{190,0,0}//
+//\definecolor{my_blue}{RGB}{0,81,104}//
+//\definecolor{yellow}{RGB}{255,246,145}//
+//\definecolor{my_gray}{RGB}{240,240,240}//
+//\definecolor{my_purple}{RGB}{104,59,111}//
+//\lstset{//
+//        extendedchars=true,//
+//        basicstyle=\scriptsize\ttfamily,      % the size of the fonts that are used for the code//
+//        language=c++,//
+//    %frame=single,                           % adds a frame around the code//
+//        backgroundcolor=\color{my_gray},          % choose the background color//
+//        keywordstyle=\color{my_blue}\bfseries,//
+//        otherkeywords={\%d,\%f,\%.2f,\%r,\%s,\\n,\\t},      //
+//    commentstyle=\color{my_purple},              //
+//    stringstyle=\color{my_red},//
+//    tabsize=2,                              % sets default tabsize to 2 spaces//
+//    showstringspaces=false,    //
+//}//
+//\lstdefinestyle{result}{language=,frame=lines,backgroundcolor=\color{yellow}}//
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+lr{//\lstinputlisting[language=python]{./5.py}}//
+
+== Brackets and Parentheses ==
+\big( \Big( \bigg( \Bigg( 	
+\big] \Big] \bigg] \Bigg] 
+\big\{ \Big\{ \bigg\{ \Bigg\{ 
+
+

@@ -1,0 +1,66 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-09-30T23:43:31+03:30
+
+====== gavazang ======
+Created چهارشنبه 30 سپتامبر 2015
+
+
+be205ab3b0
+ssh psm01
+yppasswd
+
+sinfo اطلاعات اینکه کدام نود خالی است
+۲ تا اتم روی ۲ تا اتم اکسیژن
+
+
+== ssh to gavazang : ==
+ssh a.ziaeemehr@85.185.211.20
+ssh a.ziaeemehr@85.185.211.21
+ssh abolfazl@192.168.20.18
+
+== ssh to linux systems: ==
+First connect to 85.185.211.20 then from this host connect to 85.185.211.21
+ssh a.ziaeemehr@85.185.211.20
+ssh a.ziaeemehr@85.185.211.21
+ssh a.ziaeemehr@192.168.189.74 (or other linux mashine) ssh abolfazl@192.168.14.100
+
+in Fileserver type:
+scp -r abolfazl@192.168.20.18:/home[[/abolfazl/]] .
+in Webserver type:
+scp -r a.ziaeemehr@85.185.211.21:/home/a.ziaeemehr/test .
+in abolfazl-pc type:
+scp -r a.ziaeemehr@85.185.211.20:/home/a.ziaeemehr/test .
+scp -r abolfazl@192.168.15.157:/home/abolfazl/mycode/git/cat
+
+
+== mount/unmount ==
+
+== Gavazang ==
+sshfs -o workaround=rename abolfazl@192.168.20.18:/data/home/abolfazl /home/abolfazl/mnt/gava
+fusermount -u [[/home/abolfazl/mnt/gava]]
+
+== Sahand ==
+sshfs -o workaround=rename abolfazl@192.168.14.128:/home/abolfazl [[/home/abolfazl/mnt/sahand]]
+fusermount -u [[/home/abolfazl/mnt/sahand]]
+
+
+ ssh -l username ssh.ictp.it
+
+ Mina Zarei-PC
+ssh -X a.ziaeemehr@192.168.189.88
+ssh -X user2@192.168.14.199
+
+in abolfazl laptop:
+//scp -r graph/ a.ziaeemehr@192.168.189.88:/home/a.ziaeemehr/Documents/code_scp//
+//scp -r graph/ user2@192.168.14.199:/home/user2///
+
+
+
+ping proteus.ugr.es
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-10-31T17:30:03+03:30
+
+====== To do ======
+Created شنبه 31 اكتبر 2015
+
+
+
+
+FORTRAN 90 for Engineers and Scientists
+by Larry Nyhoff (Author), Sanford Leestma (Author) 
+
+
+scp myusername1@85.185.211.20:myusername1@85.185.211.21:myusername2@192.168.20.18:/directory/to/the/file /mylocal/address 
+www.download.ir
