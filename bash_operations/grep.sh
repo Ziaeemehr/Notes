@@ -81,7 +81,7 @@ https://www.cyberciti.biz/faq/grep-subdirectory-for-files-on-linux-bsd-osx-unix-
 
 
 
-
+fgrep -r word
 
 
 

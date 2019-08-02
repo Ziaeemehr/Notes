@@ -31,13 +31,13 @@ push -u origin --tags     # pushes up any tags
 
 === new project gitlab ===
 
-== Command line instructions ==
+**Command line instructions**
 Git global setup
 
 git config --global user.name "Abolfazl Ziaeemehr"
 git config --global user.email "a.ziaeemehr@gmail.com"
 
-== Create a new repository ==
+**Create a new repository**
 
 git clone git@gitlab.com:a.ziaeemehr/test1.git
 cd test1
@@ -78,14 +78,20 @@ git checkout master 	# first see the master
 git merge dev1
 
 
+-  to remove a file completely from your repository's history:
+
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch functional_network/Wilson/human/data/png/movie.gif' --prune-empty --tag-name-filter cat -- --all
 
 
 
 
 
 
+<!-- github balanced_network -->
 
-
-
-
-
+echo "# balanced_network" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:Ziaeemehr/balanced_network.git
+git push -u origin master

@@ -1,0 +1,9 @@
+http://mail.nest-initiative.org/cgi-bin/mailman/private/nest_user/
+
+
+
+a new neuron model with my NEST simulation
+http://mail.nest-initiative.org/cgi-bin/mailman/private/nest_user/2017/004925.html
+
+# installation nest simulation
+https://nest-simulator.readthedocs.io/en/latest/installation/linux_install.html

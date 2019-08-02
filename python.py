@@ -184,3 +184,8 @@ https://stackoverflow.com/questions/40528048/pip-install-pygraphviz-no-package-l
 sudo apt-get install python-dev graphviz libgraphviz-dev pkg-config
 sudo pip install pygraphviz
 
+# format usb drive from terminal
+https://vitux.com/how-to-format-a-usb-drive-in-ubuntu/
+df -h 
+sudo umount /dev/sdb1
+sudo mkfs.vfat /dev/sdb1 # fat

@@ -291,6 +291,249 @@ sudo add-apt-repository -r "deb http://archive.canonical.com/ precise partner"
 sudo apt update
 
 
+-  How do I install the latest version of cmake from the command line?
+
+https://askubuntu.com/questions/355565/how-do-i-install-the-latest-version-of-cmake-from-the-command-line
+
+
+# tor project
+get transport obfs4
+bridges@torproject.org
+
+# How To Easily Install Tor Browser In Ubuntu 14.04 And Linux Mint 17
+https://itsfoss.com/install-tar-browser-ubuntu-linux-mint-17/
+sudo add-apt-repository ppa:webupd8team/tor-browser
+sudo apt-get update
+sudo apt-get install tor-browser
+# uninstall
+sudo apt-get remove tor-browser
+rm -r ~/.tor-browser-en
+
+
+# چگونه در لینوکس از صفحه نمایش کامپیوتر خود فیلم بگیریم؟
+faceit.ir
+
+HOWTO: Install LDOCE5 on Ubuntu 64-bit
+https://ubuntuforums.org/showthread.php?t=1387641
+
+
+# Command to check graphics card?
+inxi -G
+
+# Check What Graphics Card You’ve Got
+lspci -k | grep -A 2 -i "VGA"
+software-properties-gtk
+
+# Installing CUDA on Linux Mint 18.1
+sudo apt-get install nvidia-cuda-toolkit
+https://forums.linuxmint.com/viewtopic.php?t=246562
+https://blog.softhints.com/install-latest-nvidia-drivers-ubuntu-mint/
+# Check what drivers are installed
+dpkg --get-selections | grep nvidia
+see the version of cuda:
+nvcc --version
+
+
+install cuda on ubuntu 18.04
+https://askubuntu.com/questions/1028830/how-do-i-install-cuda-on-ubuntu-18-04 
+
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo ubuntu-drivers autoinstall
+#reboot
+sudo apt install nvidia-cuda-toolkit gcc-6
+nvcc --version
+
+
+sudo apt-get update error
+rm /etc/apt/source.liste 
+sudo apt-get update
+
+# Software Manager and Update Manager not working
+sudo apt-get clean 
+cd /var/lib/apt
+sudo mv lists lists.old
+sudo mkdir -p lists/partial
+sudo apt-get clean
+sudo apt-get update
 
 
 
+# change background color:
+texworks -stylesheet /pathto/mystyle.css
+
+QTextEdit {
+   background-color: black;  
+   color: white;            /* sets the main text color */
+}
+
+
+# GUI Clients for GIT
+https://git-scm.com/download/gui/linux
+
+
+# system information
+lscpu
+inxi -Fxz
+
+# install pandas 0.24
+sudo pip uninstall pandas
+sudo pip install --upgrade pandas
+
+
+#  Format USB Drive in Linux
+sudo umount /dev/sdc1
+sudo mkfs.vfat /dev/sdc1
+
+# System Backup: A manual approach
+https://community.linuxmint.com/tutorial/view/1577
+
+
+
+# install eigen3
+sudo apt-get install libeigen3-dev
+
+#install texlive;
+after mounting iso file:
+sudo apt-get remove texlive-* #to remove previous versions
+sudo perl install-tl 
+# press O for options
+# press L to ceate symlink
+# press Enter 3 times
+# press Y to stop updating
+# press R to return to menu
+# press I to start installation
+# have fun!
+
+# to ssh on a remote machine, the remote machine should install this:
+sudo apt-get openssh -server
+sudo systemctl start ssh
+
+
+# How do I find all files containing specific text on Linux?
+grep -rnw '/path/to/somewhere/' -e 'pattern'
+# -r or -R is recursive,
+# -n is line number, and
+# -w stands for match the whole word.
+# -l (lower-case L) can be added to just give the file name of matching files.
+
+grep -rHn "ode" */*.h | fgrep include
+
+
+
+
+# Desktop recording
+sudo apt install kazam
+
+# Use below keys to Start the Recording
+SUPER-CTRL-R
+
+# Use below keys to Finish the recording
+SUPER-CTRL-F
+
+# Use below keys to Pause the recording
+SUPER-CTRL-P
+
+# Use below Keys to Quit the recording
+SUPER-CTRL-Q
+
+
+
+# How To Change The Mouse Scroll Wheel Speed In Linux Using imwheel
+sudo apt-get install imwheel
+
+gedit ~/.imwheelrc
+None,      Up,   Button4, 3
+None,      Down, Button5, 3
+Control_L, Up,   Control_L|Button4
+Control_L, Down, Control_L|Button5
+Shift_L,   Up,   Shift_L|Button4
+Shift_L,   Down, Shift_L|Button5
+
+# finally run imwheel
+
+# install def file:
+sudo gdebi skype.deb
+
+to swich between intel and nvidia gpu
+nvidia-settings
+
+# remove permission from folder 
+# How do I clear the “s” permission on a directory in Linux?
+sudo chmod 00775 path
+or 
+chmod a-st path
+
+
+
+
+# Update Python 2.7 to latest version of 2.x
+# https://askubuntu.com/questions/725171/update-python-2-7-to-latest-version-of-2-x
+# Ubuntu 18.04 and newer:
+# The new version of Ubuntu no longer uses python 2, 
+# so you need to install it with:
+sudo apt install python-minimal
+# Ubuntu 17.04 and older:
+# The answer appears to be to add a third party repository:
+sudo add-apt-repository ppa:jonathonf/python-2.7
+sudo apt-get update
+sudo apt-get install python2.7
+python --version
+
+
+# how to avoid “Cannot uninstall X” errors for distutils packages
+add --ignore-installed 
+sudo python -m pip install -U matplotlib --ignore-installed
+https://stackoverflow.com/questions/50421287/pip-cannot-uninstall-ipython-it-is-a-distutils-installed-project-and-thus-w
+
+
+
+
+# memory profiling 
+valgrind --tool=cachegrind ./prog.exe
+
+
+
+
+# slice video in terminal
+ffmpeg -i Kazam_00001.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
+start at 3s end at 8s
+
+# join videos in terminal
+for f in $(ls *.mp4); do
+    ffmpeg -i $f -c copy -bsf:v h264_mp4toannexb -f mpegts $f.ts
+done
+
+CONCAT=$(echo $(ls *.ts) | sed -e "s/ /|/g")
+
+ffmpeg -i "concat:$CONCAT" -c copy -bsf:a aac_adtstoasc output.mp4
+
+rm *.ts
+
+
+# How do you empty the buffers and cache on a Linux system?
+# https://unix.stackexchange.com/a/87909/106248
+sudo su -
+free && sync && echo 3 > /proc/sys/vm/drop_caches && free
+
+# How do I add an additional hard drive?
+https://askubuntu.com/questions/125257/how-do-i-add-an-additional-hard-drive
+
+
+# Add the new user to the sudo group
+usermod -aG sudo username
+
+
+# get root:
+sudo -s 
+
+
+# ssh -X , ssh graphigally
+# In the server you need an ssh server, for example 
+openssh-server 
+# and at least some basic X tools, for example 
+xinit and fluxbox 
+# (and the programs and libraries that they need). You 
+# must also install the application programs that you want to run, I suggest 
+xterm 
+# and the graphical application programs that you want to run.

@@ -57,3 +57,18 @@ lr{//\lstinputlisting[language=python]{./5.py}}//
 \big\{ \Big\{ \bigg\{ \Bigg\{ 
 
 
+
+% need an equation number with align*.
+\documentclass{article}
+\usepackage{amsmath}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\begin{document}
+\begin{align*}
+a &=b \\
+  &=c \numberthis \label{eqn}
+\end{align*}
+Equation \eqref{eqn} shows that $a=c$.
+\begin{equation}
+d = e
+\end{equation}
+\end{document}

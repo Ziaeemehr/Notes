@@ -34,10 +34,10 @@ import nest
 neuronpop = nest.Create("iaf_psc_alpha", neurons , params=ndict)
 
 for edge in graph:
-	 from_idx = edge.from  # or some other member
-		 to_idx = edge.to
+	from_idx = edge.from  # or some other member
+	to_idx = edge.to
 
-	 nest.Connect([neuronpop[from_idx]], [neuronpop[to_idx]],
+	nest.Connect([neuronpop[from_idx]], [neuronpop[to_idx]],
 					 "one_to_one", syn_spec={"weight":20.0, "delay":1.0})
 
 

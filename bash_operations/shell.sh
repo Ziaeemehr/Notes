@@ -82,6 +82,8 @@ pdfunite input1.pdf input2.pdf input3.pdf output.pdf
 mogrify -crop {Width}x{Height}+{left}+{top} image.png
 get the numbers from  Pix image viewer
 
+$ mogrify -crop 712x566+38+33 *.png
+
 
 ====== find ======
 find ~ -type f -name setup.py

@@ -135,3 +135,23 @@ https://tex.stackexchange.com/questions/57418/crop-an-inserted-image
 ===== Force figure placement in text =====
 The short answer: use the “float” package and then the [H] option for your figure.
 \begin{figure}[H]
+
+
+
+use bibliography in ms word:
+use bib2xml.py to convert bib file to xml
+read this page for the rest of steps:
+http://interfacegroup.ch/how-can-i-use-my-bibtex-library-in-ms-word/
+
+Step 1: Conversion of the .bib-file
+As only citations from .xml files can be inserted in Word, the .bib bibliography must be converted from .bib to the Word-compatible xml format. Luckily, JabRef offers the possibility to export your library into an .xml file (File → Export → Files of type: “MS Office 2007 (*.xml)”)
+
+Step 2: Import relevant citations
+This newly exported file with all your citations can then be directly imported into Word documents (References → Manage Sources → Browse… ). All entries of the .xml file will then appear in the “master list”. But, before they can be added to the document, the relevant entries must be copied to the “current list”.
+
+Step 3: Inserting citations and bibliography
+After importing the bibliography into Word, any reference from the “Current List” can be cited (References → Insert Citation). And, finally, the bibliography can be added to the document (References → Bibliography).
+
+
+
+
